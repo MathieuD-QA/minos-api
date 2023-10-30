@@ -12,4 +12,10 @@ export default class Testcase extends BaseModel {
   public updatedAt: DateTime
   @column({})
   public name: string
+  @column({})
+  public description: string
+  @column({})
+  public type: string
+  @column({})
+  public status: string
 }
