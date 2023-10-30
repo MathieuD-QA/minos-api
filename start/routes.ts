@@ -24,5 +24,7 @@ Route.get('/', async () => {
   return { hello: 'world' }
 })
 
+Route.get('testcase', 'TestcasesController.index')
+Route.get('testcase/:id', 'TestcasesController.show')
 Route.post('testcase', 'TestcasesController.create')
 Route.delete('testcase/:id', 'TestcasesController.delete')
