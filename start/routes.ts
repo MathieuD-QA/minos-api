@@ -25,3 +25,4 @@ Route.get('/', async () => {
 })
 
 Route.post('testcase', 'TestcasesController.create')
+Route.delete('testcase/:id', 'TestcasesController.delete')

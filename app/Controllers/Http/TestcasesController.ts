@@ -13,4 +13,14 @@ export default class TestcasesController {
       return response.status(400).send(error.messages)
       }
     }
+
+  public async delete({ response, params }: HttpContextContract) {
+    try {
+      const id = await Testcase.findOrFail(params.id)
+      await id.delete()
+      return response.status(200).send({ message: 'Données supprimer avec success' })
+    } catch (error) {
+      return response.status(400).send({message: 'bad id' })
+    }
+  }
   }
